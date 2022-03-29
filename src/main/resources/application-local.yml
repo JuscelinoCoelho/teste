@@ -1,0 +1,42 @@
+# Servlet configuration (Tomcat)
+server:
+  port: 8085
+
+# Spring Configurations
+spring:
+  cloud:
+    kubernetes:
+      config:
+        enabled: false
+
+# Logging Configuration
+logging:
+  level:
+    org:
+      springframework: debug
+      hibernate:
+        SQL: debug
+        type: trace
+
+# Actuator (Monitoring) configurations
+info:
+  app:
+    name: hdi
+    description: teste da hdi
+    version: 0.0.1-SNAPSHOT
+    java:
+      version: 1.8
+
+# Feign client (http client) configurations
+corretorClient:
+  ribbon:
+    listOfServers: https://607732991ed0ae0017d6a9b0.mockapi.io/insurance/v1
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

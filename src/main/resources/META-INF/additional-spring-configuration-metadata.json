@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "inventory.ribbon.listOfServers",
+      "type": "java.lang.String",
+      "description": "The url for the microservice inventory."
+    }
+  ]
+}
